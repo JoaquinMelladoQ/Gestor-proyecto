@@ -1,0 +1,28 @@
+<form>
+    <select name = "state"> 
+        <option value=""></option>
+        <option value=0>Proposal</option>
+        <option value=1>In progress</option>
+        <option value =2>Finished</option>
+    </select>
+    <button type="submit"> Search</button>
+</form>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Start On</th>
+        <th>End On</th>
+        <th>State</th>
+    </tr>
+    <% @project.each do |p| %>
+    <tr>
+        <td><%= p.name %></td>
+        <td><%= p.description %></td>
+        <td><%= p.start_on %></td>
+        <td><%= p.end_on %></td>
+        <td><%= p.state %></td>
+    </tr>
+    <% end %>
+</table>

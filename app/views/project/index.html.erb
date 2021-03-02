@@ -1,0 +1,27 @@
+<h1>Enter your project</h1>
+
+<ul>
+    <%= form_with(model: @project, url: project_create_path, local: true) do |f| %>
+        <li>
+            <%= f.label :name, "Name" %>
+            <%= f.text_field :name %>
+        </li>
+        <li>
+            <%= f.label :name, "Description" %>
+            <%= f.text_area :description %>
+        </li>
+        <li>
+            <%= f.label :name, "Start on" %>
+            <%= f.date_select :start_on %>
+        </li>
+        <li>
+            <%= f.label :name, "End on" %>
+            <%= f.date_select :end_on %>
+        </li>
+        <li>
+            <%= f.label :state, "Estado" %>
+            <%= f.select :state, options_for_select(@states) %>
+        </li>
+        <%= f.submit %>
+    <% end %>
+</ul>
