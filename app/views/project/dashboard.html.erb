@@ -1,4 +1,4 @@
-<form>
+<form class="form-search">
     <select name = "state"> 
         <option value=""></option>
         <option value=0>Proposal</option>
@@ -8,21 +8,24 @@
     <button type="submit"> Search</button>
 </form>
 
-<table>
-    <tr>
+<table class="table-data">
+      <h2>Last entries</h2>
+    <tbody>
+      <tr>
         <th>Name</th>
         <th>Description</th>
         <th>Start On</th>
         <th>End On</th>
         <th>State</th>
-    </tr>
-    <% @project.each do |p| %>
-    <tr>
+      </tr>
+      <% @project.each do |p| %>
+      <tr class="trp-space">
         <td><%= p.name %></td>
         <td><%= p.description %></td>
         <td><%= p.start_on %></td>
         <td><%= p.end_on %></td>
         <td><%= p.state %></td>
-    </tr>
-    <% end %>
+      </tr>
+      <% end %>
+    </tbody>
 </table>

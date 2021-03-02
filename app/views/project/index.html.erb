@@ -1,7 +1,11 @@
-<h1>Enter your project</h1>
+<div class="container">
+    <div class="title">
+     <h1>Enter your project</h1>
+    </div>
 
-<ul>
-    <%= form_with(model: @project, url: project_create_path, local: true) do |f| %>
+    <div class="form-with">
+      <ul>
+       <%=  form_with(model: @project, url: project_create_path, local: true) do |f| %>
         <li>
             <%= f.label :name, "Name" %>
             <%= f.text_field :name %>
@@ -22,6 +26,8 @@
             <%= f.label :state, "Estado" %>
             <%= f.select :state, options_for_select(@states) %>
         </li>
-        <%= f.submit %>
-    <% end %>
-</ul>
+      </ul>
+        <button class="btn" type="submit"> New project</button>
+       <% end %>
+    </div>
+</div>

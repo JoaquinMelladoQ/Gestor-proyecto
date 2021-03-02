@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+.title {
+	display: flex;
+	justify-content: center;
+}
+.form-with {
+	display: grid;
+	justify-content: center;
+}
+.btn {
+	color: white;
+	background-color: blue;
+}
+.btn:hover {
+	color: black;
+	background-color: white;
+}
+.table-data {
+	width: 100%;
+	display: flex;
+  border-bottom: 1px solid black;
+	justify-content: space-evenly;
+}
+th {
+ display: table-cell;
+ vertical-align: inherit;
+ font-weight: bold;
+ text-align: left;
+}
+
+td {
+ text-align: left
+}
