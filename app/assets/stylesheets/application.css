@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	margin: 0px !important;
+	padding: 0px !important;
+}
 .title {
 	display: flex;
 	justify-content: center;
@@ -44,4 +49,12 @@ th {
 
 td {
  text-align: left
+}
+.navigation-bar {
+	color: white;
+	background-color: #c1c1c1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+	width: 100%;
 }
