@@ -8,11 +8,14 @@
        <%=  form_with(model: @project, url: project_create_path, local: true) do |f| %>
         <li>
             <%= f.label :name, "Name" %>
-            <%= f.text_field :name %>
+            <%= f.text_field :name, placeholder: "Enter a name", size: "30x5" %>
         </li>
         <li>
             <%= f.label :name, "Description" %>
-            <%= f.text_area :description %>
+            <%= f.text_area :description, 
+                placeholder: "Add a full description of the project",
+                size: "60x5" 
+            %>
         </li>
         <li>
             <%= f.label :name, "Start on" %>
