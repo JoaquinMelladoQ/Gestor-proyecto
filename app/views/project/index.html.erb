@@ -1,6 +1,6 @@
 <div class="container">
     <div class="title">
-     <h1>Enter your project</h1>
+     <h1>Add a new project</h1>
     </div>
 
     <div class="form-with">
@@ -14,7 +14,7 @@
             <%= f.label :name, "Description" %>
             <%= f.text_area :description, 
                 placeholder: "Add a full description of the project",
-                size: "60x5" 
+                size: "40x5" 
             %>
         </li>
         <li>
@@ -30,7 +30,7 @@
             <%= f.select :state, options_for_select(@states) %>
         </li>
       </ul>
-        <button class="btn" type="submit"> New project</button>
+        <button class="btn" type="submit"> Save</button>
        <% end %>
     </div>
 </div>
