@@ -31,11 +31,11 @@ h2, .form-search{
 	display: grid;
 	justify-content: center;
 }
-.btn {
+button {
 	color: white;
 	background-color: blue;
 }
-.btn:hover {
+button:hover {
 	color: black;
 	background-color: white;
 }

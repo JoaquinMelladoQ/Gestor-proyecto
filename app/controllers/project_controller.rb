@@ -14,11 +14,8 @@ class ProjectController < ApplicationController
   end
 
   def dashboard
-    if params[:state].present?
-      @project = Project.where('state = ?', params[:state])
-    else
-      @project = Project.all
-    end
+    return @project = Project.all unless params.has_key?(:s) && params[:s].present?
+    @project = Project.search(params[:s]) 
   end
 
   def project_params
